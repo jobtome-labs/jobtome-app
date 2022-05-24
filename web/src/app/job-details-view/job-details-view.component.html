@@ -1,0 +1,98 @@
+<app-header></app-header>
+
+<div role="main">
+
+  <div class="job-details" fxFlex fxLayout="column" fxLayoutAlign="center center">
+
+    <div fxLayout="row" fxLayoutAlign="center start">
+      <img class="no-jobs-found" *ngIf="notAvailableJob" src="assets/svg/no-jobs-found.svg" />
+    </div>
+
+    <mat-card class="job-card mat-elevation-z3" *ngIf="!notAvailableJob">
+
+      <mat-card-title>
+        <div fxLayout="row" fxLayoutAlign="space-between start">
+
+          <div class="left-side" fxLayout="row" fxLayoutAlign="start center">{{ job.title }}</div>
+
+          <div class="right-side" fxLayout="row" fxLayoutAlign="end center">
+
+            <div>
+              <mat-chip-list aria-label="Job Status">
+
+                <mat-chip *ngIf="job.is_sponsored" class="job-status chip-sponsored">Sponsored</mat-chip>
+
+                <mat-chip *ngIf="job.is_active" class="job-status chip-active">Active</mat-chip>
+                <mat-chip *ngIf="!job.is_active" class="job-status">Inactive</mat-chip>
+
+              </mat-chip-list>
+            </div>
+
+          </div>
+
+        </div>
+      </mat-card-title>
+
+      <mat-card-subtitle>
+        <mat-chip-list aria-label="Job Properties">
+
+          <mat-chip matTooltip="Job ID" matTooltipPosition="above" class="job-property">
+            <mat-chip-avatar style="margin-right: 4px;">
+              <span style="color: grey;" class="material-icons">fingerprint</span>
+            </mat-chip-avatar>
+            {{ job.id }}
+          </mat-chip>
+
+          <mat-chip matTooltip="Employer" matTooltipPosition="above" class="job-property">
+            <mat-chip-avatar style="margin-right: 4px;">
+              <span style="color: grey;" class="material-icons">business</span>
+            </mat-chip-avatar>
+            {{ job.employer }}
+          </mat-chip>
+
+          <mat-chip matTooltip="Location" matTooltipPosition="above" class="job-property">
+            <mat-chip-avatar style="margin-right: 0px;">
+              <span style="color: grey;" class="material-icons">location_on</span>
+            </mat-chip-avatar>
+            {{ job.location }}
+          </mat-chip>
+
+          <mat-chip matTooltip="Published At" matTooltipPosition="above" class="job-property">
+            <mat-chip-avatar style="margin-right: 4px;">
+              <span style="color: grey;" class="material-icons">schedule</span>
+            </mat-chip-avatar>
+            {{ job.published_at }}
+          </mat-chip>
+
+        </mat-chip-list>
+      </mat-card-subtitle>
+
+      <mat-card-content>
+
+        <br />
+
+        <h3>Description</h3>
+        <p>{{ job.description }}</p>
+
+        <br />
+
+        <h3>Contact Information</h3>
+        <p>{{ job.contact_information }}</p>
+
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <button mat-button routerLink="/jobs/{{job.id}}">Edit</button>
+        <button mat-button color="primary">Apply</button>
+      </mat-card-actions>
+
+    </mat-card>
+
+    <div class="spacer">
+    </div>
+
+  </div>
+
+</div>
+
+<app-footer></app-footer>

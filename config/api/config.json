@@ -1,0 +1,5 @@
+{
+  "database": {
+    "connectionString": "postgresql://jobtome:jobtome@postgres_db:5432/jobtome"
+  }
+}

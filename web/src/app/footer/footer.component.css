@@ -1,0 +1,51 @@
+.toolbar-container {
+  margin-top: 24px;
+}
+
+.toolbar {
+  height: 120px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: #fff;
+}
+
+.inner-left {
+}
+
+.inner-right {
+}
+
+.logo-image {
+  height: 24px;
+  margin-left: 2px;
+}
+
+.social-icons-container {
+  height: 24px;
+  margin-top: 4px;
+}
+
+.social-icon {
+  margin-right: 2px;
+  color: black;
+  text-decoration: none;
+}
+
+.rights-reserved-text {
+  font-size: 10pt;
+  font-weight: normal;
+  color: black;
+}
+
+.made-by-text {
+  margin-right: 28px;
+  font-size: 12pt;
+  font-weight: normal;
+  color: black;
+}
+
+.made-by-text i {
+  font-size: 150%;
+  font-style: normal;
+  color: #dd0055;
+}

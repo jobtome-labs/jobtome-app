@@ -1,0 +1,54 @@
+html,
+body {
+  height: 100%;
+  background-color: #fafafc;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  overflow-y: scroll;
+  background: lightgrey;
+  box-shadow: inset 0 0 4px #707070;
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+.green-snackbar {
+  background: #4caf50;
+  color: white;
+}
+
+.green-snackbar button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+.red-snackbar {
+  background: #d32f2f;
+  color: white;
+}
+
+.red-snackbar button {
+  background-color: #d32f2f;
+  color: white !important;
+  border: none;
+}
+
+.normal-snackbar {
+  background: white;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.normal-snackbar button {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.87) !important;
+  border: none;
+}

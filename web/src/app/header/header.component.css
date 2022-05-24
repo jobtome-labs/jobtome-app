@@ -1,0 +1,45 @@
+.toolbar-container {
+  top: 0px;
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 999;
+}
+
+.toolbar {
+  background-color: #fff;
+  height: 80px;
+  padding-left: 22px;
+  padding-right: 20px;
+}
+
+.inner-left {
+}
+
+.inner-right {
+}
+
+.logo-image {
+  height: 40px;
+  cursor: pointer;
+}
+
+.favorite-icon {
+  color: #dd0055;
+}
+
+.share-icon {
+  color: black;
+}
+
+.home-icon {
+  color: black;
+}
+
+.publish-job-button {
+  background-color: #5000d7;
+  color: white;
+}
+
+.spacer {
+  width: 24px;
+}

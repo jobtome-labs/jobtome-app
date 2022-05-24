@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<div role="main">
+
+  <div class="search-bar" fxFlex fxLayout="column" fxLayoutAlign="center center">
+
+    <mat-form-field class="search-form-field" appearance="outline">
+
+      <mat-label>Jobs Search</mat-label>
+
+      <input class="search-input" matInput placeholder="e.g. Site Reliability Engineer at Jobtome"
+        [formControl]="searchControl" />
+
+      <mat-icon matSuffix>search</mat-icon>
+
+      <mat-hint>Search for your next dream job ...</mat-hint>
+
+    </mat-form-field>
+
+    <div class="divider" fxFlex fxLayout="column" fxLayoutAlign="center center">
+
+      <mat-divider></mat-divider>
+
+    </div>
+
+    <div class="jobs-list" fxFlex fxLayout="column" fxLayoutAlign="center center">
+
+      <app-jobs [search]="searchControl.value"></app-jobs>
+
+    </div>
+
+  </div>
+
+</div>
+
+<app-footer></app-footer>

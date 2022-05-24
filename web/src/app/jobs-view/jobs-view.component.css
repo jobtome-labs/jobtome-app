@@ -1,0 +1,25 @@
+.search-bar {
+  margin-top: 32px;
+}
+
+.search-form-field {
+  width: calc(60% + 32px);
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: white;
+}
+
+.divider {
+  width: calc(60% + 32px);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.divider mat-divider {
+  width: 100%;
+}
+
+.jobs-list {
+  width: 100%;
+}

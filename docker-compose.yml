@@ -1,0 +1,47 @@
+---
+version: "3.9"
+
+services:
+
+  web:
+    depends_on:
+      - api
+    build:
+      context: web
+
+    ports:
+      - "8201:80"
+    volumes:
+      - ./config/web/config.json:/usr/share/nginx/html/assets/config.json
+    restart: always
+
+  api:
+    depends_on:
+      - postgres_db
+    build:
+      context: api
+
+    ports:
+      - "8200:8000"
+    volumes:
+      - ./config/api/config.json:/app/config.json
+    restart: always
+
+  postgres_db:
+    image: postgres:14.3
+
+    environment:
+      POSTGRES_PASSWORD: "jobtome"
+      POSTGRES_USER: "jobtome"
+      POSTGRES_DB: "jobtome"
+
+    restart: always
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data: {}

@@ -1,0 +1,40 @@
+:host {
+  width: 100%;
+}
+
+mat-card-title {
+  margin-bottom: 0px;
+}
+
+.job-card {
+  width: 60%;
+  margin-bottom: 16px;
+}
+
+.job-spinner {
+  margin-top: 120px;
+}
+
+.job-property {
+  min-height: 28px;
+  font-size: 12px;
+}
+
+.job-status {
+  min-height: 32px;
+  font-size: 14px;
+}
+
+.no-jobs-found {
+  width: 40%;
+}
+
+.chip-sponsored {
+  background-color: #1976d2 !important;
+  color: white;
+}
+
+.chip-active {
+  background-color: #7c51c8 !important;
+  color: white;
+}
